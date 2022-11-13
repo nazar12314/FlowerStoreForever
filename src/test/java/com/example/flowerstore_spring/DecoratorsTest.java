@@ -19,7 +19,7 @@ public class DecoratorsTest {
                 40,
                 "red",
                 11
-        ) ;
+        );
     }
 
     @Test
@@ -27,22 +27,37 @@ public class DecoratorsTest {
         BasketDecorator decoratedFlower = new BasketDecorator(item);
 
         Assertions.assertEquals(decoratedFlower.getPrice(), item.price() + 4);
-        Assertions.assertEquals(decoratedFlower.getDescription(), item.getDescription());
+        Assertions.assertEquals(
+                decoratedFlower.getDescription(),
+                item.getDescription()
+        );
     }
 
     @Test
     public void testPaperDecorator() {
         PaperDecorator decoratedFlower = new PaperDecorator(item);
 
-        Assertions.assertEquals(decoratedFlower.getPrice(), item.price() + 13);
-        Assertions.assertEquals(decoratedFlower.getDescription(), item.getDescription());
+        Assertions.assertEquals(
+                decoratedFlower.getPrice(),
+                item.price() + 13
+        );
+        Assertions.assertEquals(
+                decoratedFlower.getDescription(),
+                item.getDescription()
+        );
     }
 
     @Test
     public void testRibbonDecorator() {
         RibbonDecorator decoratedFlower = new RibbonDecorator(item);
 
-        Assertions.assertEquals(decoratedFlower.getPrice(), item.price() + 40);
-        Assertions.assertEquals(decoratedFlower.getDescription(), item.getDescription());
+        Assertions.assertEquals(
+                decoratedFlower.getPrice(),
+                item.price() + 40
+        );
+        Assertions.assertEquals(
+                decoratedFlower.getDescription(),
+                item.getDescription()
+        );
     }
 }
